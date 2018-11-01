@@ -1,12 +1,18 @@
 package com.service.httpContainer;
 
+import com.service.httpContainer.container.HttpEmbeddedServletContainer;
 import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.Configuration;
 
-@SpringBootApplication
+@Configuration
+@EnableAutoConfiguration
+//@SpringBootApplication
 public class HttpContainerApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(HttpContainerApplication.class, args);
+		SpringApplication springApplication = new SpringApplication(HttpEmbeddedServletContainer.class);
+		springApplication.run(args);
 	}
 }
