@@ -1,4 +1,4 @@
-package com.example.demo;
+package com.service.httpContainer.test;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
